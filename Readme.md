@@ -82,3 +82,59 @@ GOOGLE_CLIENT_SECRET=GOCSPX-...       # Se muestra al crear las credenciales
 
 ### En tu frontend (.env):
 VITE_GOOGLE_CLIENT_ID=848301810920-e-r1...  # Mismo ID que arriba
+
+## 🚀 Instrucciones para Levantar los Proyectos
+
+### Backend
+1. Navega al directorio del backend:
+   ```bash
+   cd backend
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configura el archivo `.env` con tus credenciales:
+   ```
+   GOOGLE_CLIENT_ID=tu_client_id
+   GOOGLE_CLIENT_SECRET=tu_client_secret
+   PORT=3000
+   FRONTEND_URL=http://localhost:5173
+   ```
+
+4. Inicia el servidor:
+   ```bash
+   npm run dev
+   ```
+
+### Frontend
+1. Navega al directorio del frontend:
+   ```bash
+   cd frontend
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configura el archivo `.env` con tus credenciales:
+   ```
+   VITE_GOOGLE_CLIENT_ID=tu_client_id
+   VITE_BACKEND_URL=http://localhost:3000
+   ```
+
+4. Inicia la aplicación:
+   ```bash
+   npm run dev
+   ```
+
+### Notas Importantes
+- Asegúrate de que tanto el backend como el frontend estén corriendo simultáneamente
+- El backend debe estar en el puerto 3000
+- El frontend se ejecutará en el puerto 5173 por defecto
+- Las URLs de redirección en Google Cloud Console deben coincidir con tus URLs de desarrollo:
+  - Frontend: http://localhost:5173
+  - Backend: http://localhost:3000/auth/google/callback
