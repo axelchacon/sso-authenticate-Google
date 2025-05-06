@@ -59,7 +59,7 @@ URIs de redireccionamiento autorizados:
 
 Agrega los endpoints de callback de tu aplicación
 
-Ejemplo: https://tudominio.com/auth/callback
+Ejemplo: https://tudominio.com/auth/google/callback
 
 Haz clic en "Crear"
 
